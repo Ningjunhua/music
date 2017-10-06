@@ -47,4 +47,7 @@
 	.singer_list .mint-cell-title img {
     margin-right: 10px
   }
-</style>
+ 
+  </style>
+
+

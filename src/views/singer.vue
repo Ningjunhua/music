@@ -29,3 +29,8 @@
 		}
 	}
 </script>
+ <style>
+  #transparent-header{
+    background:#a61c00;
+  }
+</style>

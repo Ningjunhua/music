@@ -53,4 +53,9 @@
   .mint-tab-item-label {
     font-size: 16px !important;
   }
+.mint-navbar .mint-tab-item.is-selected {
+    border-bottom: 3px solid #a61c00;
+    color: #a61c00;
+    margin-bottom: 0px;
+}
 </style>

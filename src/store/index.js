@@ -6,7 +6,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
+const store = new Vuex.Store({//创建store对象
 	state: {
 		audio: {
 			songUrl: '',
@@ -20,7 +20,7 @@ const store = new Vuex.Store({
 		head: {
 			toggle: false,
 			title: '',
-			style: {'background': 'rgba(166, 28, 0,0)'}
+			style: {'background': 'rgba(0, 0, 0,0)'}
 		},
 		headNav: 'head-nav1',
 		audioLoadding: false,
@@ -42,7 +42,7 @@ const store = new Vuex.Store({
 		showPlayer: state => state.showPlayer,
 		isPlay: state => state.isPlay
 	},
-	mutations: {
+	mutations: {//处理数据状态变化
 		setAudio(state, audio){
 			if (!state.listenCount) {
 				state.showPlayer = true  //首次进入应用时不可打开播放详情
@@ -66,7 +66,7 @@ const store = new Vuex.Store({
 			state.head.style = style
 		},
 		resetHeadStyle: state => {
-			state.head.style = {'background': 'rgba(43,162,251,0)'}
+			state.head.style = {'background': 'rgba(166,28,0)'}
 		},
 		toggleAudioLoadding: (state, flag) => {
 			state.audioLoadding = flag
@@ -91,7 +91,7 @@ const store = new Vuex.Store({
 			state.listInfo.songIndex = index
 		}
 	},
-	actions: {
+	actions: {//处理你要干什么，异步请求，判断，流程控制
 		getSong({commit, state}, hash){
 			commit('toggleAudioLoadding', true)
 			axios.get(`/bproxy/yy/index.php?r=play/getdata&hash=${hash}`).then(({data}) => {
@@ -134,4 +134,4 @@ const store = new Vuex.Store({
 	}
 })
 
-export default store
+export default store //导出store对象

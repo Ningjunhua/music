@@ -72,3 +72,11 @@
     }
   }
 </script>
+<style>
+.search-btn{
+  background-color:#a61c00; 
+}
+.search-list-title{
+  color:#a61c00;
+}
+</style>

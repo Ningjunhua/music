@@ -42,7 +42,7 @@
 				vm.getList()
 				window.onscroll = () => {
 					vm.opacity = window.pageYOffset / 250
-					vm.$store.commit('setHeadStyle', {background: `rgba(43,162,251,${vm.opacity})`})
+					vm.$store.commit('setHeadStyle', {background: `rgba(166,28,0,${vm.opacity})`})
 				}
 			});
 		},

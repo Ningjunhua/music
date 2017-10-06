@@ -35,7 +35,7 @@
 				vm.getList()
 				window.onscroll = () => {
 					vm.opacity = window.pageYOffset / 250
-					vm.$store.commit('setHeadStyle', {background: `rgba(43,162,251,${vm.opacity})`})
+					vm.$store.commit('setHeadStyle', {background: `rgba(166,28,0,${vm.opacity})`})
 				}
 			})
 		},
@@ -47,7 +47,7 @@
 		mounted(){
 			window.onscroll = () => {
 				this.opacity = window.pageYOffset / 200
-				this.$store.commit('setHeadStyle', {background: `rgba(43,162,251,${this.opacity})`})
+				this.$store.commit('setHeadStyle', {background: `rgba(166,28,0,${this.opacity})`})
 			}
 		},
 		methods: {
