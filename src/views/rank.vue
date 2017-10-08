@@ -21,7 +21,7 @@
 			getList(){
 				Indicator.open({
 					text: '加载中...',
-					spinnerType: 'snake'
+					spinnerType: 'fading-circle'
 				});
 				this.$http.get('/proxy/rank/list&json=true').then(({data}) => {
 					Indicator.close();

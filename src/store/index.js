@@ -66,7 +66,7 @@ const store = new Vuex.Store({//创建store对象
 			state.head.style = style
 		},
 		resetHeadStyle: state => {
-			state.head.style = {'background': 'rgba(166,28,0)'}
+			state.head.style = {'background': 'rgba(166,28,0,0)'}
 		},
 		toggleAudioLoadding: (state, flag) => {
 			state.audioLoadding = flag
@@ -107,6 +107,7 @@ const store = new Vuex.Store({//创建store对象
 				commit('setAudio', audio)
 				commit('setLrc', lrc)
 				commit('toggleAudioLoadding', false)
+				
 			})
 		},
 		prev({dispatch, state}){

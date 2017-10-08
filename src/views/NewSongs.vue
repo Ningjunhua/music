@@ -9,7 +9,6 @@
 		</mt-swipe>
 		
 		<mt-cell v-for="(song, index) in songList" :title="song.filename" @click.native="playAudio(index)" :key="index">
-			<img src="../assets/images/download_icon.png" width="20" height="20">
 		</mt-cell>
 	</div>
 </template>
@@ -32,7 +31,8 @@
 			getSongs(){
 				Indicator.open({
 					text: '加载中...',
-					spinnerType: 'snake'
+					spinnerType: 'fading-circle',
+					color:'#a61c00'
 				});
 				this.$http.get('/proxy/?json=true').then(({data}) => {
 					this.banners = data.banner

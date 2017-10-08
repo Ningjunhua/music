@@ -22,7 +22,7 @@
 			getList(){
 				Indicator.open({
 					text: '加载中...',
-					spinnerType: 'snake'
+					spinnerType: 'fading-circle'
 				});
 				this.$http.get('/proxy/plist/index&json=true').then(({data}) => {
 					Indicator.close()

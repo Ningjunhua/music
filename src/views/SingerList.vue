@@ -30,7 +30,7 @@
       getList(){
         Indicator.open({
           text: '加载中...',
-          spinnerType: 'snake'
+          spinnerType: 'fading-circle'
         });
         var singerID = this.$route.params.id
         this.$http.get(`/proxy/singer/list/${singerID}?json=true`).then(({data})=> {

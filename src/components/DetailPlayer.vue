@@ -13,8 +13,7 @@
       </div>
       <div class="detail_player-lrc">
         <div class="lrc-content" :style="{marginTop: lrcOffset + 'px' }">
-          <p v-for="(item,index) in songLrc"
-             :class="{isCurrentLrc:item.seconds >= audio.currentLength}">
+          <p v-for="(item,index) in songLrc":class="{isCurrentLrc:item.seconds >= audio.currentLength}">
             {{item.lrcContent}}</p>
         </div>
       </div>
@@ -68,6 +67,7 @@
           var temp = this.audio.lrc.split('\r\n')
           temp = temp.splice(0, temp.length - 1)
           temp = temp.map((value)=> {
+            
             var time = value.substr(1, 5)
             var seconds = parseInt(time.split(':')[0]) * 60 + parseInt(time.split(':')[1])
             var lrcContent = value.substr(10)

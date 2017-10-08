@@ -9,7 +9,7 @@
 		<div class="rank-info-list">
 			<mt-cell v-for="(item,index) in songList" :title="item.filename" @click.native="playAudio(index)" :key="index">
 				<span class="rank-index" :class="{'rank-list-good' : index<3, 'rank-list-first' : index==0, 'rank-list-second' : index==1, 'rank-list-third' : index==2}">{{index + 1}}</span>
-				<img src="../assets/images/download_icon.png" width="20" height="20">
+				
 			</mt-cell>
 		</div>
 	</div>
@@ -63,7 +63,7 @@
 			getList(){
 				Indicator.open({
 					text: '加载中...',
-					spinnerType: 'snake'
+					spinnerType: 'fading-circle'
 				})
 				var infoID = this.$route.params.id;
 				this.$http.get(`/proxy/rank/info/?rankid=${infoID}&page=1&json=true`).then(({data}) => {
